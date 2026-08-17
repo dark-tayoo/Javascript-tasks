@@ -1,0 +1,95 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Ticket Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>🎫 Support Ticket Manager</h1>
+    </div>
+  </header>
+
+  <main class="container layout">
+    
+    <!-- LEFT COLUMN: Ticket Creation Form -->
+    <aside class="sidebar">
+      <div class="card">
+        <h2>Create New Ticket</h2>
+        <!-- 
+          In a real app, you would attach an event listener to this form 
+          in app.js to trigger the createTicket() service.
+        -->
+        <form id="create-ticket-form">
+          <div class="form-group">
+            <label for="title">Issue Title</label>
+            <input type="text" id="title" placeholder="e.g., Cannot access billing" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" rows="4" placeholder="Detailed explanation..." required></textarea>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="priority">Priority</label>
+              <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="urgent">Urgent</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category">
+                <option value="bug">Bug</option>
+                <option value="feature_request">Feature Request</option>
+                <option value="billing">Billing</option>
+                <option value="general_support">General Support</option>
+              </select>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn-primary">Submit Ticket</button>
+        </form>
+      </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: Filters and Ticket List -->
+    <section class="content">
+      
+      <!-- Search and Filters (Milestone 4) -->
+      <div class="controls card">
+        <input type="text" id="search" placeholder="Search tickets...">
+        <select id="filter-status">
+          <option value="">All Statuses</option>
+          <option value="open">Open</option>
+          <option value="in_progress">In Progress</option>
+          <option value="resolved">Resolved</option>
+          <option value="closed">Closed</option>
+        </select>
+      </div>
+
+      <!-- 
+        The Render Container (Milestones 4 & 8) 
+        app.js will inject .ticket-card, .loading-state, or .error-state inside this div.
+      -->
+      <div id="ticket-list" class="ticket-list-container">
+        <!-- JavaScript renders content here -->
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Notice type="module". This is required to use 'import' and 'export' in our JS files -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>

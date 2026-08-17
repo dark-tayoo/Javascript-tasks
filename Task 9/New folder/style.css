@@ -1,0 +1,112 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f6f8fa;
+  color: #24292f;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: #2da44e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #2c974b;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.state {
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#state-loading {
+  background-color: #e1effe;
+  color: #0366d6;
+}
+
+.error {
+  background-color: #ffebe9;
+  color: #cf222e;
+  border: 1px solid #ff8182;
+}
+
+#retry-btn {
+  background-color: #cf222e;
+  margin-top: 10px;
+}
+
+.empty {
+  background-color: #fff8c5;
+  color: #9a6700;
+  border: 1px solid #d4a72c;
+}
+
+.result-card {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  background: #f6f8fa;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.stats span {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.profile-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #0969da;
+  font-weight: 600;
+}

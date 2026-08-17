@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Basic styling for the container */
+    #quiz-container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: sans-serif;
+    }
+    #options-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    #options-list li {
+      margin-bottom: 10px;
+    }
+    .btn {
+      padding: 10px 15px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  </style>
+<body>
+    <h1>Javascript practice</h1>
+    div id="quiz-container">
+    <div id="quiz-header">
+      <h2>General Knowledge Quiz</h2>
+      <p>Score: <span id="score-display">0</span></p>
+    </div>
+    
+    <div id="question-container">
+      <h3 id="question-text">Question will appear here</h3>
+      <ul id="options-list">
+        <!-- Radio buttons and labels will be injected here via JS -->
+      </ul>
+    </div>
+
+    <div id="quiz-footer">
+      <button id="submit-btn" class="btn" disabled>Submit Answer</button>
+      <button id="next-btn" class="btn" style="display: none;">Next Question</button>
+    </div>
+  </div>
+   <script src="task6.js"></script>
+</body>
+</html>

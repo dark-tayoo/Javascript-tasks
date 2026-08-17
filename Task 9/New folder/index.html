@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub User Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>GitHub Finder</h1>
+    
+    <div class="search-box">
+      <input type="text" id="username-input" placeholder="Enter GitHub username..." />
+      <button id="search-btn">Search</button>
+    </div>
+
+    <!-- UI States -->
+    <div id="state-loading" class="state hidden">Fetching user data...</div>
+    
+    <div id="state-error" class="state error hidden">
+      <p>Network failure or API error occurred.</p>
+      <button id="retry-btn">Retry</button>
+    </div>
+    
+    <div id="state-empty" class="state empty hidden">
+      <p>User not found. Try another username.</p>
+    </div>
+
+    <!-- User Details Result -->
+    <div id="state-result" class="result-card hidden">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
